@@ -1,5 +1,5 @@
 #include <stdio.h>
-// 5-25-20
+// 5-25-20, 5-26-20
 
 int main() {
     int input = getchar();
@@ -47,13 +47,30 @@ int main() {
                 nlength++;
             }
         }
-    } else if (input == '3') {
+    } else if (input == '3') {              //builds histogram of first 20 word lengths from stdin USING arrays
         int nchar;
+        int wordn = 0;
+        int wordl = 0;
+        int wordLengths[20];
+        
+        nchar = getchar();
+        while ((nchar = getchar()) != '$') {
+            if (nchar == ' ' || nchar == '\n') {
+                wordLengths[wordn] = wordl;
+                wordn++;
+                wordl = 0;
+            } else {
+                wordl++;
+            }
+        }
+
+        printf("Word 1 2 3 4 5 6 7 8 9\n");
+        printf("---- - - - - - - - - -\n");
+        for (int i = 0; i < 20; i++) {
+            printf("%4d %.*s\n", i + 1, wordLengths[i] * 2, "x x x x x x x x x ");
+        }
         
     }
 
-
-
-
-
+    return 0;
 }
