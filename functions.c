@@ -21,7 +21,6 @@ int lower(int c) {           // returns lowercase of c if c is alpha
 }
 
 
-
 int main() {        //test power and lower func
     for (int i = 0; i < 10; i++) {
         printf("%d %d %d\n", i, power(2, i), power(-3, i));
