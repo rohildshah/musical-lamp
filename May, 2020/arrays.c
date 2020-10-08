@@ -1,5 +1,5 @@
 #include <stdio.h>
-// 5-25-20, 5-26-20
+// 5-25-20
 
 int main() {
     int input = getchar();
